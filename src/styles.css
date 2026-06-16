@@ -1,111 +1,281 @@
-:root {
+ :root {
   color-scheme: dark;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: Inter, Arial, Helvetica, sans-serif;
   background: #000;
   color: #fff;
 }
+* { box-sizing: border-box; }
+html, body, #root { min-height: 100%; }
+body { margin: 0; background: #000; color: #fff; }
+button, input { font: inherit; }
 
-* {
-  box-sizing: border-box;
-}
+.app-shell { min-height: 100vh; background: #000; padding: 24px; }
+.app-container { max-width: 1280px; margin: 0 auto; display: flex; flex-direction: column; gap: 24px; }
+.stack-gap { display: flex; flex-direction: column; gap: 24px; }
+.stack-gap-sm { display: flex; flex-direction: column; gap: 16px; }
+.muted { color: #94a3b8; font-size: 14px; }
+.small { font-size: 12px; }
 
-body {
-  margin: 0;
-  background: #000;
-  color: #fff;
-}
-
-.app-shell {
-  min-height: 100vh;
-  background: #000;
-  padding: 24px;
-}
-
-.container {
-  max-width: 1200px;
-  margin: 0 auto;
-}
-
-.hero {
+.hero-card, .panel-card, .leader-card, .owner-header {
   border: 1px solid rgba(255,255,255,0.1);
-  background: #111;
+  background: #111827;
   border-radius: 24px;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.25);
+}
+.hero-card {
   padding: 24px;
-  margin-bottom: 24px;
-}
-
-.hero h1 {
-  margin: 0 0 8px 0;
-  font-size: 32px;
-}
-
-.hero p {
-  margin: 0;
-  color: #cbd5e1;
-  line-height: 1.5;
-}
-
-.section h2 {
-  margin: 0 0 16px 0;
-  font-size: 22px;
-}
-
-.card-grid {
-  display: grid;
-  gap: 16px;
-  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
-}
-
-.card {
-  border: 1px solid rgba(255,255,255,0.1);
-  background: #111;
-  border-radius: 24px;
-  padding: 18px;
-}
-
-.card-top {
   display: flex;
+  gap: 24px;
+  flex-wrap: wrap;
+  align-items: center;
   justify-content: space-between;
-  align-items: flex-start;
-  gap: 12px;
 }
-
-.label {
-  font-size: 12px;
-  color: #94a3b8;
-}
-
-.value {
-  margin-top: 4px;
-  font-weight: 700;
-  font-size: 16px;
-}
-
-.pill {
+.page-title { margin: 0; font-size: 34px; line-height: 1.1; }
+.hero-copy { margin: 8px 0 0 0; max-width: 840px; color: #cbd5e1; line-height: 1.55; }
+.hero-badges, .owner-pills { display: flex; gap: 8px; flex-wrap: wrap; margin-top: 12px; }
+.hero-pill, .meta-pill, .neutral-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  border-radius: 999px;
   border: 1px solid rgba(255,255,255,0.1);
   background: rgba(255,255,255,0.05);
-  border-radius: 999px;
+  color: #e5e7eb;
   padding: 6px 10px;
   font-size: 12px;
-  color: #e2e8f0;
+  line-height: 1;
+}
+.search-wrap { flex: 0 1 360px; width: 100%; }
+.search-input {
+  width: 100%;
+  padding: 13px 16px;
+  border-radius: 18px;
+  border: 1px solid rgba(255,255,255,0.1);
+  background: #000;
+  color: #fff;
+  outline: none;
+}
+.search-input::placeholder { color: #64748b; }
+
+.leader-grid { display: grid; gap: 16px; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); }
+.leader-card { padding: 18px; }
+.leader-top { display: flex; gap: 12px; align-items: flex-start; justify-content: space-between; }
+.leader-name { margin-top: 4px; font-size: 18px; font-weight: 700; }
+.leader-total-box {
+  min-width: 82px;
+  text-align: right;
+  border-radius: 18px;
+  border: 1px solid rgba(255,255,255,0.1);
+  background: rgba(255,255,255,0.05);
+  padding: 8px 12px;
+}
+.leader-total { font-size: 28px; font-weight: 800; }
+.leader-meta { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 14px; }
+
+.tabs-bar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  padding: 8px;
+  border-radius: 18px;
+  border: 1px solid rgba(255,255,255,0.1);
+  background: #111827;
+}
+.tab-btn {
+  border: 0;
+  background: transparent;
+  color: #cbd5e1;
+  cursor: pointer;
+  border-radius: 14px;
+  padding: 10px 14px;
+}
+.tab-btn.active { background: rgba(255,255,255,0.1); color: #fff; }
+
+.owner-header { padding: 20px; display: flex; gap: 16px; flex-wrap: wrap; align-items: center; justify-content: space-between; }
+.owner-name { margin: 4px 0 0 0; font-size: 30px; }
+.team-grid { display: grid; gap: 16px; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); }
+.team-card {
+  border: 1px solid rgba(255,255,255,0.14);
+  border-radius: 24px;
+  padding: 18px;
+  min-height: 210px;
+}
+.team-card-header { display: flex; gap: 12px; align-items: center; justify-content: space-between; }
+.team-title-wrap { display: flex; gap: 12px; min-width: 0; align-items: center; }
+.team-title { margin: 0; font-size: 22px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.group-badge {
+  border-radius: 999px;
+  padding: 7px 12px;
+  font-size: 12px;
+  font-weight: 700;
   white-space: nowrap;
 }
-
-.team-name {
+.team-stats {
   margin-top: 16px;
-  font-size: 24px;
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+  align-items: center;
+  border: 1px solid rgba(255,255,255,0.14);
+  background: rgba(255,255,255,0.04);
+  border-radius: 18px;
+  padding: 12px 14px;
+}
+.stat { color: #cbd5e1; font-size: 14px; }
+.stat-strong { font-size: 14px; font-weight: 800; }
+.next-match-box {
+  margin-top: 16px;
+  border-radius: 18px;
+  border: 1px solid rgba(255,255,255,0.14);
+  background: rgba(255,255,255,0.03);
+  padding: 14px;
+}
+.next-label { font-size: 13px; color: #cbd5e1; }
+.next-value { margin-top: 6px; font-size: 16px; font-weight: 700; line-height: 1.45; }
+
+.panel-card { padding: 20px; }
+.panel-title { font-size: 22px; font-weight: 800; margin-bottom: 14px; }
+.fixture-list, .next-list { display: flex; flex-direction: column; gap: 12px; }
+.fixture-row, .next-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  border-radius: 18px;
+  border: 1px solid rgba(255,255,255,0.1);
+  background: rgba(255,255,255,0.03);
+  padding: 14px;
+}
+.fixture-main { display: flex; align-items: center; gap: 12px; }
+.fixture-title { margin-top: 4px; font-size: 16px; font-weight: 700; }
+.fixture-side { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; }
+.fixture-result { font-size: 14px; color: #e5e7eb; }
+.score-pill {
+  border-radius: 12px;
+  border: 1px solid rgba(255,255,255,0.1);
+  background: rgba(255,255,255,0.05);
+  color: #e5e7eb;
+  padding: 6px 10px;
+  font-size: 14px;
+}
+.digest-grid { display: grid; gap: 16px; grid-template-columns: minmax(0, 1.2fr) minmax(320px, .8fr); }
+.digest-box, .subject-box, .body-box { display: flex; flex-direction: column; gap: 12px; }
+.subject-box, .body-box {
+  border-radius: 18px;
+  border: 1px solid rgba(255,255,255,0.1);
+  background: rgba(0,0,0,0.4);
+  padding: 16px;
+}
+.subject-title { font-size: 14px; font-weight: 800; }
+.subject-line { color: #cbd5e1; }
+.body-box p { margin: 0; color: #e5e7eb; }
+.body-box ul, .today-games ul { margin: 0; padding-left: 20px; color: #cbd5e1; }
+.body-box li, .today-games li { margin-bottom: 4px; line-height: 1.45; }
+.today-games { margin-top: 8px; padding-top: 12px; border-top: 1px solid rgba(255,255,255,0.1); }
+.send-btn {
+  margin-top: 4px;
+  width: 100%;
+  border: 0;
+  cursor: pointer;
+  border-radius: 16px;
+  background: #fff;
+  color: #111;
+  padding: 12px 16px;
   font-weight: 700;
 }
-
-.next-match-label {
-  margin-top: 16px;
-  font-size: 13px;
-  color: #94a3b8;
+.rules-grid { display: grid; gap: 16px; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); }
+.rule-card {
+  border-radius: 18px;
+  border: 1px solid rgba(255,255,255,0.1);
+  background: rgba(0,0,0,0.4);
+  text-align: center;
+  padding: 20px;
 }
+.rule-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  border-radius: 999px;
+  margin-bottom: 10px;
+  background: #fff;
+  color: #111;
+  font-weight: 800;
+}
+.rule-title { font-size: 22px; font-weight: 800; margin-bottom: 6px; }
 
-.next-match {
-  margin-top: 6px;
-  font-size: 15px;
-  color: #fff;
-  line-height: 1.4;
+.flag-icon {
+  width: 28px;
+  height: 20px;
+  overflow: hidden;
+  border-radius: 4px;
+  border: 1px solid rgba(255,255,255,0.15);
+  background: #fff;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+  flex: 0 0 auto;
+  position: relative;
+}
+.flag, .flag > *, .flag-tri-vertical, .flag-tri-horizontal { width: 100%; height: 100%; position: relative; }
+.flag-tri-vertical, .flag canada, .flag panama { display: flex; }
+.flag-tri-horizontal { display: flex; flex-direction: column; }
+.flag.japan { display: flex; align-items: center; justify-content: center; background: #fff; }
+.flag.japan .sun { width: 11px; height: 11px; border-radius: 999px; background: #BC002D; }
+.flag.sweden { background: #006AA7; }
+.flag.sweden .cross-v, .flag.england .cross-v, .flag.norway .cross-v.white, .flag.swiss .cross-v { position: absolute; left: 28%; top: 0; width: 18%; height: 100%; background: #FECC00; }
+.flag.sweden .cross-h, .flag.england .cross-h, .flag.norway .cross-h.white, .flag.swiss .cross-h { position: absolute; left: 0; top: 42%; width: 100%; height: 18%; background: #FECC00; }
+.flag.algeria .left { position: absolute; inset: 0 50% 0 0; background: #006233; }
+.flag.algeria .right { position: absolute; inset: 0 0 0 50%; background: #fff; }
+.flag.algeria .center-symbol { position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; font-size: 10px; font-weight: 800; color: #D21034; }
+.flag.qatar { background: #8A1538; }
+.flag.qatar .white-block { position: absolute; inset: 0 62% 0 0; background: #fff; }
+.flag.qatar .teeth { position: absolute; left: 34%; top: 0; width: 18%; height: 100%; background: linear-gradient(to bottom, transparent 0%, transparent 8%, #8A1538 8%, #8A1538 16%, transparent 16%, transparent 24%, #8A1538 24%, #8A1538 32%, transparent 32%, transparent 40%, #8A1538 40%, #8A1538 48%, transparent 48%, transparent 56%, #8A1538 56%, #8A1538 64%, transparent 64%, transparent 72%, #8A1538 72%, #8A1538 80%, transparent 80%, transparent 88%, #8A1538 88%, #8A1538 96%, transparent 96%, transparent 100%); }
+.flag.jordan .stripes { position: absolute; inset: 0; display: flex; flex-direction: column; }
+.flag.jordan .s1 { flex: 1; background: #000; } .flag.jordan .s2 { flex: 1; background: #fff; } .flag.jordan .s3 { flex: 1; background: #007A3D; }
+.flag.jordan .triangle { position: absolute; left: 0; top: 0; width: 42%; height: 100%; background: #CE1126; clip-path: polygon(0 0,100% 50%,0 100%); }
+.flag.jordan .star, .center-star { position: absolute; top: 50%; left: 10%; transform: translateY(-50%); font-size: 8px; color: #fff; }
+.flag.england .cross-v { left: 42%; width: 16%; background: #CE1126; }
+.flag.england .cross-h { top: 42%; height: 16%; background: #CE1126; }
+.flag.scotland { background: #0065BD; }
+.flag.scotland .saltire { position: absolute; left: -18%; top: 40%; width: 140%; height: 18%; background: #fff; }
+.flag.scotland .one { transform: rotate(35deg); } .flag.scotland .two { transform: rotate(-35deg); }
+.flag.norway { background: #BA0C2F; }
+.flag.norway .cross-v.white { left: 26%; width: 20%; background: #fff; }
+.flag.norway .cross-h.white { top: 38%; height: 24%; background: #fff; }
+.flag.norway .cross-v.blue { position: absolute; left: 31%; top: 0; width: 10%; height: 100%; background: #00205B; }
+.flag.norway .cross-h.blue { position: absolute; left: 0; top: 43%; width: 100%; height: 14%; background: #00205B; }
+.flag.haiti .top { height: 50%; background: #00209F; } .flag.haiti .bottom { height: 50%; background: #D21034; } .flag.haiti .shield { position: absolute; left: 50%; top: 50%; width: 8px; height: 8px; background: #fff; border-radius: 2px; transform: translate(-50%, -50%); }
+.flag.nz, .flag.australia { background: #00247D; } .flag.nz .star, .flag.australia .star { position: absolute; color: #f87171; font-size: 7px; } .flag.nz .s1 { right: 18%; top: 18%; } .flag.nz .s2 { right: 35%; top: 44%; } .flag.nz .s3 { right: 12%; top: 62%; }
+.flag.swiss { background: #D52B1E; } .flag.swiss .cross-v { left: 36%; top: 18%; width: 28%; height: 64%; background: #fff; } .flag.swiss .cross-h { left: 18%; top: 36%; width: 64%; height: 28%; background: #fff; }
+.flag.czechia .top { height: 50%; background: #fff; } .flag.czechia .bottom { height: 50%; background: #D7141A; } .flag.czechia .triangle { position: absolute; left: 0; top: 0; width: 45%; height: 100%; background: #11457E; clip-path: polygon(0 0,100% 50%,0 100%); }
+.flag.korea { background: #fff; display: flex; align-items: center; justify-content: center; } .flag.korea .taegeuk { position: absolute; width: 12px; height: 12px; border-radius: 999px; } .flag.korea .taegeuk.red { background: #C60C30; } .flag.korea .taegeuk.blue { transform: translateX(2px); background: #003478; clip-path: inset(50% 0 0 0); }
+.flag.saudi { background: #006C35; } .flag.saudi .script { position: absolute; left: 20%; top: 42%; width: 60%; height: 10%; background: #fff; }
+.flag.croatia .checkerboard { position: absolute; left: 50%; top: 50%; width: 12px; height: 12px; transform: translate(-50%, -50%); display: grid; grid-template-columns: repeat(2,1fr); overflow: hidden; border: 1px solid rgba(17,24,39,.2); background: #fff; } .flag.croatia .checkerboard span:nth-child(1), .flag.croatia .checkerboard span:nth-child(4) { background: #FF0000; }
+.flag.drcongo { background: #00A3E0; } .flag.drcongo .band { position: absolute; left: -10%; width: 120%; transform: rotate(-28deg); } .flag.drcongo .band.gold { top: 44%; height: 14%; background: #F7D618; } .flag.drcongo .band.red { top: 47%; height: 8%; background: #EF3340; }
+.flag.brazil { background: #009C3B; } .flag.brazil .diamond { position: absolute; left: 50%; top: 50%; width: 16px; height: 16px; background: #FFDF00; transform: translate(-50%, -50%) rotate(45deg); } .flag.brazil .circle { position: absolute; left: 50%; top: 50%; width: 10px; height: 10px; border-radius: 999px; background: #002776; transform: translate(-50%, -50%); }
+.flag.morocco { background: #C1272D; } .flag.morocco .green { color: #006233; left: 50%; transform: translate(-50%, -50%); }
+.flag.southafrica { background: #DE3831; } .flag.southafrica .bottom-blue { position: absolute; right: 0; bottom: 0; width: 100%; height: 50%; background: #002395; } .flag.southafrica .black-triangle { position: absolute; left: 0; top: 0; width: 40%; height: 100%; background: #000; clip-path: polygon(0 0,100% 30%,100% 70%,0 100%); } .flag.southafrica .green-band { position: absolute; left: 18%; top: 0; width: 90%; height: 100%; background: #007A4D; clip-path: polygon(0 38%,100% 20%,100% 34%,25% 50%,100% 66%,100% 80%,0 62%,14% 50%); } .flag.southafrica .gold-band { position: absolute; left: 11%; top: 0; width: 96%; height: 100%; background: #FFB612; opacity: .9; clip-path: polygon(0 34%,100% 16%,100% 24%,18% 50%,100% 76%,100% 84%,0 66%,10% 50%); } .flag.southafrica .white-band { position: absolute; left: 16%; top: 6%; width: 88%; height: 88%; background: #fff; clip-path: polygon(0 34%,100% 20%,100% 28%,22% 50%,100% 72%,100% 80%,0 66%,13% 50%); }
+.flag.uzbekistan { display: flex; flex-direction: column; } .flag.uzbekistan .u1 { height: 34%; background: #00A3DD; } .flag.uzbekistan .r1 { height: 6%; background: #CE1126; } .flag.uzbekistan .u2 { height: 26%; background: #fff; } .flag.uzbekistan .r2 { height: 6%; background: #CE1126; } .flag.uzbekistan .u3 { height: 28%; background: #1EB53A; }
+.flag.argentina .sun-dot, .flag.egypt .gold-script, .flag.iraq .green-script { position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; font-size: 7px; } .flag.argentina .sun-dot { color: #F6B40E; }
+.flag.turkey { background: #E30A17; } .flag.turkey .moon { position: absolute; top: 50%; width: 12px; height: 12px; border-radius: 999px; transform: translateY(-50%); } .flag.turkey .outer { left: 24%; background: #fff; } .flag.turkey .inner { left: 28%; background: #E30A17; } .flag.turkey .white { position: absolute; left: 44%; top: 50%; transform: translateY(-50%); color: #fff; font-size: 7px; }
+.flag.bosnia { background: #002F6C; } .flag.bosnia .triangle { position: absolute; top: 0; right: 0; width: 46%; height: 100%; background: #FCD116; clip-path: polygon(100% 0,0 50%,100% 100%); } .flag.bosnia .dots { position: absolute; right: 7%; top: 8%; color: #fff; font-size: 5px; line-height: 1; display: flex; flex-direction: column; gap: 1px; }
+.flag.tunisia { background: #E70013; display: flex; align-items: center; justify-content: center; } .flag.tunisia .disc { width: 16px; height: 16px; border-radius: 999px; background: #fff; color: #E70013; font-size: 7px; display: flex; align-items: center; justify-content: center; }
+.flag.panama { display: grid; grid-template-columns: 1fr 1fr; grid-template-rows: 1fr 1fr; } .flag.panama .cell { display: flex; align-items: center; justify-content: center; } .flag.panama .ws { background: #fff; color: #005293; font-size: 7px; } .flag.panama .wr { background: #fff; color: #D21034; font-size: 7px; } .flag.panama .r { background: #D21034; } .flag.panama .b { background: #005293; }
+.flag.uruguay { background: #fff; } .flag.uruguay .stripes { position: absolute; inset: 0; display: flex; flex-direction: column; } .flag.uruguay .stripes div { height: 11.111%; } .flag.uruguay .stripes .blue { background: #6CCFF6; } .flag.uruguay .canton { position: absolute; left: 0; top: 0; width: 34%; height: 48%; background: #fff; } .flag.uruguay .sun { position: absolute; left: 9%; top: 9%; font-size: 8px; color: #F6B40E; }
+.flag.canada { display: flex; } .flag.canada .bar { width: 25%; background: #D80621; } .flag.canada .center { width: 50%; background: #fff; display: flex; align-items: center; justify-content: center; color: #D80621; font-size: 8px; }
+.flag.australia .s1 { left: 16%; top: 20%; color: #fff; } .flag.australia .s2 { right: 14%; top: 28%; color: #fff; } .flag.australia .s3 { right: 26%; top: 58%; color: #fff; }
+.flag.portugal { display: flex; } .flag.portugal .left { width: 40%; background: #006600; } .flag.portugal .right { width: 60%; background: #FF0000; } .flag.portugal .crest { position: absolute; left: 34%; top: 50%; width: 10px; height: 10px; border-radius: 999px; transform: translateY(-50%); border: 1px solid #FFDF00; background: #FFCC00; }
+.flag.curacao { background: #002B7F; } .flag.curacao .yellow-band { position: absolute; left: 0; top: 58%; width: 100%; height: 12%; background: #F9E814; } .flag.curacao .tri { position: absolute; left: 0; top: 0; width: 34%; height: 46%; background: #002B7F; clip-path: polygon(0 0,100% 0,0 100%); } .flag.curacao .star { position: absolute; color: #fff; font-size: 6px; } .flag.curacao .s1 { left: 7%; top: 12%; } .flag.curacao .s2 { left: 15%; top: 22%; font-size: 4px; }
+.flag.capeverde { background: #003893; } .flag.capeverde .line { position: absolute; left: 0; width: 100%; } .flag.capeverde .l1 { top: 54%; height: 8%; background: #fff; } .flag.capeverde .l2 { top: 64%; height: 6%; background: #CF2027; } .flag.capeverde .l3 { top: 72%; height: 8%; background: #fff; } .flag.capeverde .dots { position: absolute; left: 18%; top: 42%; color: #F7D116; font-size: 6px; }
+.flag.fallback { background: #475569; }
+
+@media (max-width: 980px) {
+  .digest-grid { grid-template-columns: 1fr; }
+}
+@media (max-width: 720px) {
+  .app-shell { padding: 16px; }
+  .page-title { font-size: 28px; }
+  .owner-name { font-size: 24px; }
+  .tabs-bar { overflow-x: auto; }
 }
