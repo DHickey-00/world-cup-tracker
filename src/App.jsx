@@ -74,7 +74,7 @@ const buildTheme = (seed) => ({
 const teamThemes = Object.fromEntries(Object.entries(teamThemeSeeds).map(([code, seed]) => [code, buildTheme(seed)]));
 
 const teamCatalog = {
-   FRA: { name: "France", group: "Group I", points: 3, record: { w: 1, d: 0, l: 0 }, nextMatch: "Jun 22, 5:00 PM ET vs Iraq" },
+  FRA: { name: "France", group: "Group I", points: 3, record: { w: 1, d: 0, l: 0 }, nextMatch: "Jun 22, 5:00 PM ET vs Iraq" },
   JPN: { name: "Japan", group: "Group F", points: 1, record: { w: 0, d: 1, l: 0 }, nextMatch: "Jun 20 vs Tunisia" },
   SWE: { name: "Sweden", group: "Group F", points: 3, record: { w: 1, d: 0, l: 0 }, nextMatch: "Jun 20 vs Netherlands" },
   ALG: { name: "Algeria", group: "Group J", points: 0, record: { w: 0, d: 0, l: 1 }, nextMatch: "Jun 22, 11:00 PM ET vs Jordan" },
@@ -185,6 +185,7 @@ const initialMatches = [
   { date: "Jun 18", time: "2:00 AM ET", teamCode: "UZB", team: "Uzbekistan", opponent: "Colombia", result: "—", status: "Upcoming", pts: 0 },
   { date: "Jun 18", time: "2:00 AM ET", teamCode: "COL", team: "Colombia", opponent: "Uzbekistan", result: "—", status: "Upcoming", pts: 0 }
 ];
+
 
 const OWNER_ROSTERS = owners.map((owner) => {
   const teams = owner.codes.map((code) => ({ code, ...teamCatalog[code] }));
