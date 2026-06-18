@@ -360,7 +360,7 @@ export default function App() {
         <header className="hero-card">
           <div>
             <h1 className="page-title">Fantasy World Cup Tracker</h1>
-            <p className="hero-copy">Track all fantasy league rosters using the same dark scoreboard layout, with each owner’s six teams, current points, and next matches.</p>
+            <p className="hero-copy">WORLD CUP 26 Fantasy league rosters. Track each members six teams, current points, and next matches.</p>
             <div className="hero-badges">
               <span className="hero-pill">👥 {owners.length} fantasy managers</span>
               <span className="hero-pill">🕘 Daily check-in: 9:00 AM ET</span>
