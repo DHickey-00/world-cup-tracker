@@ -206,12 +206,12 @@ const initialMatches = [
 
   { date: "Jun 19", time: "3:00 PM ET", teamCode: "USA", team: "United States", opponent: "Australia", result: "—", status: "Upcoming", pts: 0 },
   { date: "Jun 19", time: "3:00 PM ET", teamCode: "AUS", team: "Australia", opponent: "United States", result: "—", status: "Upcoming", pts: 0 },
-  { date: "Jun 19", time: "12:00 PM ET", teamCode: "SCO", team: "Scotland", opponent: "Morocco", result: "—", status: "Upcoming", pts: 0 },
-  { date: "Jun 19", time: "12:00 PM ET", teamCode: "MAR", team: "Morocco", opponent: "Scotland", result: "—", status: "Upcoming", pts: 0 },
-  { date: "Jun 19", time: "5:30 PM ET", teamCode: "BRA", team: "Brazil", opponent: "Haiti", result: "—", status: "Upcoming", pts: 0 },
-  { date: "Jun 19", time: "5:30 PM ET", teamCode: "HAI", team: "Haiti", opponent: "Brazil", result: "—", status: "Upcoming", pts: 0 },
-  { date: "Jun 19", time: "8:00 PM ET", teamCode: "TUR", team: "Türkiye", opponent: "Paraguay", result: "—", status: "Upcoming", pts: 0 },
-  { date: "Jun 19", time: "8:00 PM ET", teamCode: "PAR", team: "Paraguay", opponent: "Türkiye", result: "—", status: "Upcoming", pts: 0 }
+  { date: "Jun 19", time: "6:00 PM ET", teamCode: "SCO", team: "Scotland", opponent: "Morocco", result: "—", status: "Upcoming", pts: 0 },
+  { date: "Jun 19", time: "6:00 PM ET", teamCode: "MAR", team: "Morocco", opponent: "Scotland", result: "—", status: "Upcoming", pts: 0 },
+  { date: "Jun 19", time: "8:00 PM ET", teamCode: "BRA", team: "Brazil", opponent: "Haiti", result: "—", status: "Upcoming", pts: 0 },
+  { date: "Jun 19", time: "8:00 PM ET", teamCode: "HAI", team: "Haiti", opponent: "Brazil", result: "—", status: "Upcoming", pts: 0 },
+  { date: "Jun 19", time: "11:00 PM ET", teamCode: "TUR", team: "Türkiye", opponent: "Paraguay", result: "—", status: "Upcoming", pts: 0 },
+  { date: "Jun 19", time: "11:00 PM ET", teamCode: "PAR", team: "Paraguay", opponent: "Türkiye", result: "—", status: "Upcoming", pts: 0 }
 ];
 
 
