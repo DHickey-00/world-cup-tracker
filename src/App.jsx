@@ -74,7 +74,7 @@ const buildTheme = (seed) => ({
 const teamThemes = Object.fromEntries(Object.entries(teamThemeSeeds).map(([code, seed]) => [code, buildTheme(seed)]));
 
 const teamCatalog = {
-  FRA: { name: "France", group: "Group I", points: 3, record: { w: 1, d: 0, l: 0 }, nextMatch: "Jun 22, 5:00 PM ET vs Iraq" },
+ FRA: { name: "France", group: "Group I", points: 3, record: { w: 1, d: 0, l: 0 }, nextMatch: "Jun 22, 5:00 PM ET vs Iraq" },
   JPN: { name: "Japan", group: "Group F", points: 1, record: { w: 0, d: 1, l: 0 }, nextMatch: "Jun 20 vs Tunisia" },
   SWE: { name: "Sweden", group: "Group F", points: 3, record: { w: 1, d: 0, l: 0 }, nextMatch: "Jun 20 vs Netherlands" },
   ALG: { name: "Algeria", group: "Group J", points: 0, record: { w: 0, d: 0, l: 1 }, nextMatch: "Jun 22, 11:00 PM ET vs Jordan" },
@@ -123,6 +123,7 @@ const teamCatalog = {
   CPV: { name: "Cape Verde", group: "Group H", points: 1, record: { w: 0, d: 1, l: 0 }, nextMatch: "Jun 21 vs Uruguay" },
   CIV: { name: "Côte d'Ivoire", group: "Group E", points: 3, record: { w: 1, d: 0, l: 0 }, nextMatch: "Jun 20 vs Germany" }
 };
+
 const owners = [
   { name: "David Hickey", codes: ["FRA", "JPN", "SWE", "ALG", "QAT", "JOR"] },
   { name: "Vince Barbati", codes: ["ENG", "NOR", "SEN", "CIV", "HAI", "NZL"] },
@@ -135,7 +136,7 @@ const owners = [
 ];
 
 const initialMatches = [
-  { date: "Jun 11", time: "3:00 PM ET", teamCode: "MEX", team: "Mexico", opponent: "South Africa", result: "2-0", status: "Win", pts: 3 },
+ { date: "Jun 11", time: "3:00 PM ET", teamCode: "MEX", team: "Mexico", opponent: "South Africa", result: "2-0", status: "Win", pts: 3 },
   { date: "Jun 11", time: "3:00 PM ET", teamCode: "RSA", team: "South Africa", opponent: "Mexico", result: "0-2", status: "Loss", pts: 0 },
   { date: "Jun 11", time: "10:00 PM ET", teamCode: "KOR", team: "South Korea", opponent: "Czechia", result: "2-1", status: "Win", pts: 3 },
   { date: "Jun 11", time: "10:00 PM ET", teamCode: "CZE", team: "Czechia", opponent: "South Korea", result: "1-2", status: "Loss", pts: 0 },
@@ -195,7 +196,6 @@ const initialMatches = [
   { date: "Jun 18", time: "9:00 PM ET", teamCode: "MEX", team: "Mexico", opponent: "South Korea", result: "—", status: "Upcoming", pts: 0 },
   { date: "Jun 18", time: "9:00 PM ET", teamCode: "KOR", team: "South Korea", opponent: "Mexico", result: "—", status: "Upcoming", pts: 0 }
 ];
-
 
 const OWNER_ROSTERS = owners.map((owner) => {
   const teams = owner.codes.map((code) => ({ code, ...teamCatalog[code] }));
