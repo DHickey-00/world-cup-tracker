@@ -74,16 +74,16 @@ const buildTheme = (seed) => ({
 const teamThemes = Object.fromEntries(Object.entries(teamThemeSeeds).map(([code, seed]) => [code, buildTheme(seed)]));
 
 const teamCatalog = {
-  FRA: { name: "France", group: "Group I", points: 3, record: { w: 1, d: 0, l: 0 }, nextMatch: "Jun 22, 5:00 PM ET vs Iraq" },
+  FRA: { name: "France", group: "Group I", points: 6, record: { w: 2, d: 0, l: 0 }, nextMatch: "Jun 26, 3:00 PM ET vs Norway" },
   JPN: { name: "Japan", group: "Group F", points: 4, record: { w: 1, d: 1, l: 0 }, nextMatch: "Jun 25, 7:00 PM ET vs Sweden" },
   SWE: { name: "Sweden", group: "Group F", points: 3, record: { w: 1, d: 0, l: 1 }, nextMatch: "Jun 25, 7:00 PM ET vs Japan" },
-  ALG: { name: "Algeria", group: "Group J", points: 0, record: { w: 0, d: 0, l: 1 }, nextMatch: "Jun 22, 11:00 PM ET vs Jordan" },
+  ALG: { name: "Algeria", group: "Group J", points: 3, record: { w: 1, d: 0, l: 1 }, nextMatch: "Jun 27, 10:00 PM ET vs Austria" },
   QAT: { name: "Qatar", group: "Group B", points: 1, record: { w: 0, d: 1, l: 1 }, nextMatch: "Jun 24, 3:00 PM ET vs Bosnia and Herzegovina" },
-  JOR: { name: "Jordan", group: "Group J", points: 0, record: { w: 0, d: 0, l: 1 }, nextMatch: "Jun 22, 11:00 PM ET vs Algeria" },
+  JOR: { name: "Jordan", group: "Group J", points: 0, record: { w: 0, d: 0, l: 2 }, nextMatch: "Jun 27, 10:00 PM ET vs Argentina" },
 
   ENG: { name: "England", group: "Group L", points: 3, record: { w: 1, d: 0, l: 0 }, nextMatch: "Jun 23, 4:00 PM ET vs Ghana" },
-  NOR: { name: "Norway", group: "Group I", points: 3, record: { w: 1, d: 0, l: 0 }, nextMatch: "Jun 22, 8:00 PM ET vs Senegal" },
-  SEN: { name: "Senegal", group: "Group I", points: 0, record: { w: 0, d: 0, l: 1 }, nextMatch: "Jun 22, 8:00 PM ET vs Norway" },
+  NOR: { name: "Norway", group: "Group I", points: 6, record: { w: 2, d: 0, l: 0 }, nextMatch: "Jun 26, 3:00 PM ET vs France" },
+  SEN: { name: "Senegal", group: "Group I", points: 0, record: { w: 0, d: 0, l: 2 }, nextMatch: "Jun 26, 3:00 PM ET vs Iraq" },
   HAI: { name: "Haiti", group: "Group C", points: 0, record: { w: 0, d: 0, l: 2 }, nextMatch: "Jun 24, 6:00 PM ET vs Morocco" },
   NZL: { name: "New Zealand", group: "Group G", points: 1, record: { w: 0, d: 1, l: 1 }, nextMatch: "Jun 26, 11:00 PM ET vs Belgium" },
   GER: { name: "Germany", group: "Group E", points: 6, record: { w: 2, d: 0, l: 0 }, nextMatch: "Jun 25, 4:00 PM ET vs Ecuador" },
@@ -108,7 +108,7 @@ const teamCatalog = {
   RSA: { name: "South Africa", group: "Group A", points: 1, record: { w: 0, d: 1, l: 1 }, nextMatch: "Jun 24, 9:00 PM ET vs South Korea" },
   UZB: { name: "Uzbekistan", group: "Group K", points: 0, record: { w: 0, d: 0, l: 1 }, nextMatch: "Jun 23, 1:00 PM ET vs Portugal" },
 
-  ARG: { name: "Argentina", group: "Group J", points: 3, record: { w: 1, d: 0, l: 0 }, nextMatch: "Jun 22, 1:00 PM ET vs Austria" },
+  ARG: { name: "Argentina", group: "Group J", points: 6, record: { w: 2, d: 0, l: 0 }, nextMatch: "Jun 27, 10:00 PM ET vs Jordan" },
   BEL: { name: "Belgium", group: "Group G", points: 2, record: { w: 0, d: 2, l: 0 }, nextMatch: "Jun 26, 11:00 PM ET vs New Zealand" },
   TUR: { name: "Türkiye", group: "Group D", points: 0, record: { w: 0, d: 0, l: 2 }, nextMatch: "Jun 25, 10:00 PM ET vs United States" },
   BIH: { name: "Bosnia and Herzegovina", group: "Group B", points: 1, record: { w: 0, d: 1, l: 1 }, nextMatch: "Jun 24, 3:00 PM ET vs Qatar" },
@@ -120,11 +120,11 @@ const teamCatalog = {
   CAN: { name: "Canada", group: "Group B", points: 4, record: { w: 1, d: 1, l: 0 }, nextMatch: "Jun 24, 3:00 PM ET vs Switzerland" },
   SCO: { name: "Scotland", group: "Group C", points: 3, record: { w: 1, d: 0, l: 1 }, nextMatch: "Jun 24, 6:00 PM ET vs Brazil" },
   AUS: { name: "Australia", group: "Group D", points: 3, record: { w: 1, d: 0, l: 1 }, nextMatch: "Jun 25, 10:00 PM ET vs Paraguay" },
-  IRQ: { name: "Iraq", group: "Group I", points: 0, record: { w: 0, d: 0, l: 1 }, nextMatch: "Jun 22, 5:00 PM ET vs France" },
+  IRQ: { name: "Iraq", group: "Group I", points: 0, record: { w: 0, d: 0, l: 2 }, nextMatch: "Jun 26, 3:00 PM ET vs Senegal" },
 
   POR: { name: "Portugal", group: "Group K", points: 1, record: { w: 0, d: 1, l: 0 }, nextMatch: "Jun 23, 1:00 PM ET vs Uzbekistan" },
   MEX: { name: "Mexico", group: "Group A", points: 6, record: { w: 2, d: 0, l: 0 }, nextMatch: "Jun 24, 9:00 PM ET vs Czechia" },
-  AUT: { name: "Austria", group: "Group J", points: 3, record: { w: 1, d: 0, l: 0 }, nextMatch: "Jun 22, 1:00 PM ET vs Argentina" },
+  AUT: { name: "Austria", group: "Group J", points: 3, record: { w: 1, d: 0, l: 1 }, nextMatch: "Jun 27, 10:00 PM ET vs Algeria" },
   EGY: { name: "Egypt", group: "Group G", points: 4, record: { w: 1, d: 1, l: 0 }, nextMatch: "Jun 26, 11:00 PM ET vs Iran" },
   CUW: { name: "Curaçao", group: "Group E", points: 1, record: { w: 0, d: 1, l: 1 }, nextMatch: "Jun 25, 4:00 PM ET vs Côte d'Ivoire" },
   CPV: { name: "Cape Verde", group: "Group H", points: 2, record: { w: 0, d: 2, l: 0 }, nextMatch: "Jun 26, 8:00 PM ET vs Saudi Arabia" },
@@ -144,6 +144,7 @@ const owners = [
 ];
 
 const initialMatches = [
+  
   { date: "Jun 11", time: "3:00 PM ET", teamCode: "MEX", team: "Mexico", opponent: "South Africa", result: "2-0", status: "Win", pts: 3 },
   { date: "Jun 11", time: "3:00 PM ET", teamCode: "RSA", team: "South Africa", opponent: "Mexico", result: "0-2", status: "Loss", pts: 0 },
   { date: "Jun 11", time: "10:00 PM ET", teamCode: "KOR", team: "South Korea", opponent: "Czechia", result: "2-1", status: "Win", pts: 3 },
@@ -235,14 +236,23 @@ const initialMatches = [
   { date: "Jun 21", time: "9:00 PM ET", teamCode: "NZL", team: "New Zealand", opponent: "Egypt", result: "1-3", status: "Loss", pts: 0 },
   { date: "Jun 21", time: "9:00 PM ET", teamCode: "EGY", team: "Egypt", opponent: "New Zealand", result: "3-1", status: "Win", pts: 3 },
 
-  { date: "Jun 22", time: "1:00 PM ET", teamCode: "ARG", team: "Argentina", opponent: "Austria", result: "—", status: "Upcoming", pts: 0 },
-  { date: "Jun 22", time: "1:00 PM ET", teamCode: "AUT", team: "Austria", opponent: "Argentina", result: "—", status: "Upcoming", pts: 0 },
-  { date: "Jun 22", time: "5:00 PM ET", teamCode: "FRA", team: "France", opponent: "Iraq", result: "—", status: "Upcoming", pts: 0 },
-  { date: "Jun 22", time: "5:00 PM ET", teamCode: "IRQ", team: "Iraq", opponent: "France", result: "—", status: "Upcoming", pts: 0 },
-  { date: "Jun 22", time: "8:00 PM ET", teamCode: "NOR", team: "Norway", opponent: "Senegal", result: "—", status: "Upcoming", pts: 0 },
-  { date: "Jun 22", time: "8:00 PM ET", teamCode: "SEN", team: "Senegal", opponent: "Norway", result: "—", status: "Upcoming", pts: 0 },
-  { date: "Jun 22", time: "11:00 PM ET", teamCode: "JOR", team: "Jordan", opponent: "Algeria", result: "—", status: "Upcoming", pts: 0 },
-  { date: "Jun 22", time: "11:00 PM ET", teamCode: "ALG", team: "Algeria", opponent: "Jordan", result: "—", status: "Upcoming", pts: 0 }
+  { date: "Jun 22", time: "1:00 PM ET", teamCode: "ARG", team: "Argentina", opponent: "Austria", result: "2-0", status: "Win", pts: 3 },
+  { date: "Jun 22", time: "1:00 PM ET", teamCode: "AUT", team: "Austria", opponent: "Argentina", result: "0-2", status: "Loss", pts: 0 },
+  { date: "Jun 22", time: "5:00 PM ET", teamCode: "FRA", team: "France", opponent: "Iraq", result: "3-0", status: "Win", pts: 3 },
+  { date: "Jun 22", time: "5:00 PM ET", teamCode: "IRQ", team: "Iraq", opponent: "France", result: "0-3", status: "Loss", pts: 0 },
+  { date: "Jun 22", time: "8:00 PM ET", teamCode: "NOR", team: "Norway", opponent: "Senegal", result: "3-2", status: "Win", pts: 3 },
+  { date: "Jun 22", time: "8:00 PM ET", teamCode: "SEN", team: "Senegal", opponent: "Norway", result: "2-3", status: "Loss", pts: 0 },
+  { date: "Jun 22", time: "11:00 PM ET", teamCode: "JOR", team: "Jordan", opponent: "Algeria", result: "1-2", status: "Loss", pts: 0 },
+  { date: "Jun 22", time: "11:00 PM ET", teamCode: "ALG", team: "Algeria", opponent: "Jordan", result: "2-1", status: "Win", pts: 3 },
+
+  { date: "Jun 23", time: "1:00 PM ET", teamCode: "POR", team: "Portugal", opponent: "Uzbekistan", result: "—", status: "Upcoming", pts: 0 },
+  { date: "Jun 23", time: "1:00 PM ET", teamCode: "UZB", team: "Uzbekistan", opponent: "Portugal", result: "—", status: "Upcoming", pts: 0 },
+  { date: "Jun 23", time: "4:00 PM ET", teamCode: "ENG", team: "England", opponent: "Ghana", result: "—", status: "Upcoming", pts: 0 },
+  { date: "Jun 23", time: "4:00 PM ET", teamCode: "GHA", team: "Ghana", opponent: "England", result: "—", status: "Upcoming", pts: 0 },
+  { date: "Jun 23", time: "7:00 PM ET", teamCode: "PAN", team: "Panama", opponent: "Croatia", result: "—", status: "Upcoming", pts: 0 },
+  { date: "Jun 23", time: "7:00 PM ET", teamCode: "CRO", team: "Croatia", opponent: "Panama", result: "—", status: "Upcoming", pts: 0 },
+  { date: "Jun 23", time: "10:00 PM ET", teamCode: "COL", team: "Colombia", opponent: "DR Congo", result: "—", status: "Upcoming", pts: 0 },
+  { date: "Jun 23", time: "10:00 PM ET", teamCode: "COD", team: "DR Congo", opponent: "Colombia", result: "—", status: "Upcoming", pts: 0 }
 ];
 
 
