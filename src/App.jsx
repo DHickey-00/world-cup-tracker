@@ -309,14 +309,14 @@ const initialMatches = [
   { date: "Jun 27", time: "10:00 PM ET", teamCode: "ARG", team: "Argentina", opponent: "Jordan", result: "3-1", status: "Win", pts: 3 },
 
   { date: "Jun 28", time: "3:00 PM ET", teamCode: "RSA", team: "South Africa", opponent: "Canada", result: "0-1", status: "Knockout Loss", pts: 0 },
-  { date: "Jun 28", time: "3:00 PM ET", teamCode: "CAN", team: "Canada", opponent: "South Africa", result: "1-0", status: "Knockout Win", pts: 0 },
+  { date: "Jun 28", time: "3:00 PM ET", teamCode: "CAN", team: "Canada", opponent: "South Africa", result: "1-0", status: "Knockout Win", pts: 3 },
 
-  { date: "Jun 29", time: "1:00 PM ET", teamCode: "BRA", team: "Brazil", opponent: "Japan", result: "—", status: "Upcoming", pts: 0 },
-  { date: "Jun 29", time: "1:00 PM ET", teamCode: "JPN", team: "Japan", opponent: "Brazil", result: "—", status: "Upcoming", pts: 0 },
-  { date: "Jun 29", time: "4:30 PM ET", teamCode: "GER", team: "Germany", opponent: "Paraguay", result: "—", status: "Upcoming", pts: 0 },
-  { date: "Jun 29", time: "4:30 PM ET", teamCode: "PAR", team: "Paraguay", opponent: "Germany", result: "—", status: "Upcoming", pts: 0 },
-  { date: "Jun 29", time: "9:00 PM ET", teamCode: "NED", team: "Netherlands", opponent: "Morocco", result: "—", status: "Upcoming", pts: 0 },
-  { date: "Jun 29", time: "9:00 PM ET", teamCode: "MAR", team: "Morocco", opponent: "Netherlands", result: "—", status: "Upcoming", pts: 0 },
+  { date: "Jun 29", time: "1:00 PM ET", teamCode: "BRA", team: "Brazil", opponent: "Japan", result: "2-1", status: "Knockout Win", pts: 3 },
+  { date: "Jun 29", time: "1:00 PM ET", teamCode: "JPN", team: "Japan", opponent: "Brazil", result: "1-2", status: "Knockout Loss", pts: 0 },
+  { date: "Jun 29", time: "4:30 PM ET", teamCode: "GER", team: "Germany", opponent: "Paraguay", result: "1-1, lost 3-4 pens", status: "Knockout Loss", pts: 0 },
+  { date: "Jun 29", time: "4:30 PM ET", teamCode: "PAR", team: "Paraguay", opponent: "Germany", result: "1-1, won 4-3 pens", status: "Knockout Win", pts: 3 },
+  { date: "Jun 29", time: "9:00 PM ET", teamCode: "NED", team: "Netherlands", opponent: "Morocco", result: "1-1, lost 2-3 pens", status: "Knockout Loss", pts: 0 },
+  { date: "Jun 29", time: "9:00 PM ET", teamCode: "MAR", team: "Morocco", opponent: "Netherlands", result: "1-1, won 3-2 pens", status: "Knockout Win", pts: 3 },
 
   { date: "Jun 30", time: "1:00 PM ET", teamCode: "CIV", team: "Côte d'Ivoire", opponent: "Norway", result: "1-2", status: "Knockout Loss", pts: 0 },
   { date: "Jun 30", time: "1:00 PM ET", teamCode: "NOR", team: "Norway", opponent: "Côte d'Ivoire", result: "2-1", status: "Knockout Win", pts: 3 },
